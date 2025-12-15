@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Ejercicio 1</title>
+</head>
+<body>
+
+<script>
+    // Fecha de hoy
+    let hoy = new Date();
+
+    // Fecha de fin de curso (AJÚSTALA si te dicen otra en el examen)
+    // Ejemplo: 30 de junio del año actual
+    let finCurso = new Date(hoy.getFullYear(), 5, 30);
+
+    let diasLectivos = 0;
+
+    // Copiamos la fecha de hoy para no modificarla directamente
+    let fechaActual = new Date(hoy);
+
+    // Recorremos día a día hasta el fin de curso (incluido)
+    while (fechaActual <= finCurso) {
+
+        let diaSemana = fechaActual.getDay(); 
+        // 0 = domingo, 6 = sábado
+
+        // Si no es sábado ni domingo, cuenta como día lectivo
+        if (diaSemana !== 0 && diaSemana !== 6) {
+            diasLectivos++;
+        }
+
+        // Avanzamos un día
+        fechaActual.setDate(fechaActual.getDate() + 1);
+    }
+
+    console.log("Días lectivos hasta fin de curso: " + diasLectivos);
+</script>
+
+</body>
+</html>
