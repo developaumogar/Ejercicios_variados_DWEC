@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 9</title>
+</head>
+<body>
+    <h1>Ejercicio 9</h1>
+</body>
+<script>
+    let num1 = parseInt (prompt("Escriba el número 1: "));
+    let num2 = parseInt (prompt("Escriba el número 2: "));
+    let num3 = parseInt (prompt("Escriba el número 3: "));
+    let mayor;
+    if (num1 >= num2 && num1 >= num3) {
+    mayor = num1;
+    } else if (num2 >= num1 && num2 >= num3){
+    mayor = num2;
+    } else {
+    mayor = num3;
+    }
+
+    console.log("El número mayor es: " + mayor);
+</script>
+</html>

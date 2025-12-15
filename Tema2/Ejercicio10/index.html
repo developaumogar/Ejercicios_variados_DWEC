@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ejercicio 10</title>
+</head>
+<body>
+    <h1>Ejercicio 10</h1>
+    <button id="boton">Pulsa para sumar 1</button>
+    <p>Contador: <span id="mostrar">0</span></p>
+
+</body>
+<script>
+    let boton = document.getElementById("boton")
+    let mostrar = document.getElementById("mostrar")
+    let contador = 0;
+    boton.addEventListener("click", ()=>{
+        contador++;
+        mostrar.textContent = contador;
+    })
+</script>
+</html>
